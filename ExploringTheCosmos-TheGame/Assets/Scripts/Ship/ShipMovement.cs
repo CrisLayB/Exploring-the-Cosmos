@@ -7,22 +7,26 @@ public class ShipMovement : MonoBehaviour
 {
     [Header("Ship Movement")]
     [SerializeField] private float _moveSpeed = 10f;
-    [SerializeField] private float _rotationSpeed = 1f;   
+    [SerializeField] private float _nitroSpeed = 20f;
+    [SerializeField] private float _rotationSpeed = 1f;
+
+    [Header("UI Connection")]
+    [SerializeField] private TextInfo _textInfo;
+
+    // Private Components
     private Rigidbody _rb; 
 
     // Auxiliar Components
-    private GameObject _gameObjectText;
     private TextMeshProUGUI _textVisitinPlanet;
     private Planet _planetSelected;
 
     private void Start() 
     {
-        _rb = GetComponent<Rigidbody>();
-        _gameObjectText = GameObject.Find("Visit Text (TMP)");
+        _rb = GetComponent<Rigidbody>();        
 
-        if(_gameObjectText != null)
+        if(_textInfo != null)
         {
-            _textVisitinPlanet = _gameObjectText.GetComponent<TextMeshProUGUI>();
+            _textVisitinPlanet = _textInfo.GetComponentInChildren<TextMeshProUGUI>();
         }
 
         if(_textVisitinPlanet != null)
@@ -47,12 +51,18 @@ public class ShipMovement : MonoBehaviour
 
         if(Input.GetButtonDown("ConfirmButton") && _planetSelected)
         {
-            // print("Go To The Planet");
             LevelSelector.PlanetNavigation(_planetSelected.PlanetSelected);
         }
 
         float moveDirection = Input.GetAxis("Vertical");
-        transform.Translate(Vector3.forward * moveDirection * _moveSpeed * Time.deltaTime);
+
+        float shipVelocity = _moveSpeed;
+        float inputNitro = Input.GetAxis("Nitro");
+
+        if(Input.GetButtonDown("Nitro")) shipVelocity = _nitroSpeed;
+        else if(inputNitro > 0.1f) shipVelocity = _nitroSpeed * Mathf.Abs(inputNitro);
+
+        transform.Translate(Vector3.forward * moveDirection * shipVelocity * Time.deltaTime);
 
         float yaw = Input.GetAxis("Horizontal") * _rotationSpeed;
         transform.Rotate(0, yaw, 0);
@@ -76,9 +86,18 @@ public class ShipMovement : MonoBehaviour
     private void OnCollisionEnter(Collision other) 
     {
         if(other.gameObject?.GetComponent<Planet>().PlanetSelected == PlanetType.Sol)
-        {
-            Destroy(this.gameObject);
+        {            
+            StartCoroutine(RestartLevel());
         }
+    }
+
+    private IEnumerator RestartLevel()
+    {
+        print("AAA");
+        Destroy(this.gameObject);        
+        yield return new WaitForSeconds(2f);
+        LevelSelector.GalaxyNavigation();
+        print("BBB");
     }
 
     private void OnCollisionExit(Collision other) 
@@ -96,7 +115,8 @@ public class ShipMovement : MonoBehaviour
 
         if(_textVisitinPlanet == null) return;
 
-        _textVisitinPlanet.text = $"Presiona Tecla Espacio o Botón A para visitar: {_planetSelected.PlanetSelected.ToString()}";
+        _textInfo.PopDownMenu();
+        _textVisitinPlanet.text = $"{_planetSelected.PlanetSelected.ToString()}\n\nPresiona Tecla Espacio o Boton A para visitar.";
     }
 
     private void OnTriggerExit(Collider other) 
@@ -105,6 +125,7 @@ public class ShipMovement : MonoBehaviour
         
         if(_textVisitinPlanet == null) return;
 
+        _textInfo.PopDownMenu();
         _textVisitinPlanet.text = $"";
     }
 }
