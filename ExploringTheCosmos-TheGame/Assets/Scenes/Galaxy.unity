@@ -1460,12 +1460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7498661296989127214, guid: b15af974952c8ff45a053229b6a56775, type: 3}
       propertyPath: m_text
-      value: 'Planeta -1
-
-
-        Presiona "Tecla Espacio" o "Boton A" para visitar.
-
-'
+      value: "Planeta -1\nPresiona la tecla [Espacio] o bot\xF3n [A] para visitar\n"
       objectReference: {fileID: 0}
     - target: {fileID: 7498661296989127214, guid: b15af974952c8ff45a053229b6a56775, type: 3}
       propertyPath: m_fontSize
@@ -2281,23 +2276,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1474479753382861135, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 800
+      value: 935.72
       objectReference: {fileID: 0}
     - target: {fileID: 1474479753382861135, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 450
-      objectReference: {fileID: 0}
-    - target: {fileID: 1474479753382861135, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.0519
-      objectReference: {fileID: 0}
-    - target: {fileID: 1474479753382861135, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2.0519
-      objectReference: {fileID: 0}
-    - target: {fileID: 1474479753382861135, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2.0519
+      value: 526.34
       objectReference: {fileID: 0}
     - target: {fileID: 1474479753382861135, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2329,11 +2312,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1474479753382861135, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -0.00049591
       objectReference: {fileID: 0}
     - target: {fileID: 1474479753382861135, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -0.00049973
       objectReference: {fileID: 0}
     - target: {fileID: 1474479753382861135, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
