@@ -115,8 +115,10 @@ public class ShipMovement : MonoBehaviour
 
         if(_textVisitinPlanet == null) return;
 
-        _textInfo.PopDownMenu();
+        
         _textVisitinPlanet.text = $"{_planetSelected.PlanetSelected.ToString()}\n\nPresiona Tecla Espacio o Boton A para visitar.";
+        _textInfo.gameObject.SetActive(true);
+        StartCoroutine(_textInfo.PopUpMenu());
     }
 
     private void OnTriggerExit(Collider other) 
@@ -125,7 +127,7 @@ public class ShipMovement : MonoBehaviour
         
         if(_textVisitinPlanet == null) return;
 
-        _textInfo.PopDownMenu();
+        StartCoroutine(_textInfo.PopDownMenu());
         _textVisitinPlanet.text = $"";
     }
 }
