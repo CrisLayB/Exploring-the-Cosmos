@@ -17,5 +17,10 @@ Folders Organization:
 
 ## You can play the game with the following Links:
 
+### Download The Game
+
 https://drive.google.com/drive/folders/1Hpo9p5qskg65-o2WKZcXE3QqeewPRBQQ?usp=drive_link
 
+### Play it in Web GL Browser
+
+https://play.unity.com/en/games/725c48b5-a41d-4dfa-b35f-3c20393d7d9c/exploringthecosmos62webgl
