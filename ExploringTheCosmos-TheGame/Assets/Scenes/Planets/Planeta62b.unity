@@ -1947,6 +1947,7 @@ MonoBehaviour:
   controllerBtn: {fileID: 677393118}
   exitControllerBtn: {fileID: 1843452974}
   logBtn: {fileID: 17614099}
+  exitLogBtn: {fileID: 2032660793}
 --- !u!4 &1234533258
 Transform:
   m_ObjectHideFlags: 0
@@ -3162,7 +3163,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2032660796}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1234533257}
+        m_TargetAssemblyTypeName: Tests, Assembly-CSharp
+        m_MethodName: closeLogs
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2032660796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3489,6 +3502,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUD_btn_log
       objectReference: {fileID: 0}
+    - target: {fileID: 8333827207992703290, guid: 40dd224ac57fbdf498cf175c96661c55, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8333827207992703290, guid: 40dd224ac57fbdf498cf175c96661c55, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8333827207992703290, guid: 40dd224ac57fbdf498cf175c96661c55, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1234533257}
+    - target: {fileID: 8333827207992703290, guid: 40dd224ac57fbdf498cf175c96661c55, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8333827207992703290, guid: 40dd224ac57fbdf498cf175c96661c55, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: openLogs
+      objectReference: {fileID: 0}
+    - target: {fileID: 8333827207992703290, guid: 40dd224ac57fbdf498cf175c96661c55, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Tests, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8333827207992703290, guid: 40dd224ac57fbdf498cf175c96661c55, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3502,6 +3543,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2096965128}
     m_Modifications:
+    - target: {fileID: 1088772579804194543, guid: f18d2186102a39b498ee5cae803fe26d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1088772579804194543, guid: f18d2186102a39b498ee5cae803fe26d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1088772579804194543, guid: f18d2186102a39b498ee5cae803fe26d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1234533257}
+    - target: {fileID: 1088772579804194543, guid: f18d2186102a39b498ee5cae803fe26d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1088772579804194543, guid: f18d2186102a39b498ee5cae803fe26d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenControllers
+      objectReference: {fileID: 0}
+    - target: {fileID: 1088772579804194543, guid: f18d2186102a39b498ee5cae803fe26d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Tests, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1088772579804194543, guid: f18d2186102a39b498ee5cae803fe26d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2510411662412915908, guid: f18d2186102a39b498ee5cae803fe26d, type: 3}
       propertyPath: m_Name
       value: HUD_btn_controllers

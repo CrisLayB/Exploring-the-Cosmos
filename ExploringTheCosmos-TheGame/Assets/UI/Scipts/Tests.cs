@@ -21,6 +21,7 @@ public class Tests : MonoBehaviour
     [SerializeField] GameObject controllerBtn;
     [SerializeField] GameObject exitControllerBtn;
     [SerializeField] GameObject logBtn;
+    [SerializeField] GameObject exitLogBtn;
 
 
     
@@ -83,7 +84,7 @@ public class Tests : MonoBehaviour
 
     public void CloseControllers() {
         EventSystem.current.SetSelectedGameObject(null);
-        EventSystem.current.SetSelectedGameObject(controllerBtn);
+        EventSystem.current.SetSelectedGameObject(exitControllerBtn);
         controllersPanel = controllersPanelGO.GetComponent<ControllersPanel>();
         StartCoroutine(controllersPanel.PopDownMenu());
         
@@ -91,7 +92,7 @@ public class Tests : MonoBehaviour
 
     public void openLogs() {
         EventSystem.current.SetSelectedGameObject(null);
-        EventSystem.current.SetSelectedGameObject(controllerBtn);
+        EventSystem.current.SetSelectedGameObject(logBtn);
         logMenu = logMenuGO.GetComponent<LogMenu>();
         logMenuGO.SetActive(true);
         StartCoroutine(logMenu.PopUpMenu());
@@ -99,7 +100,7 @@ public class Tests : MonoBehaviour
 
     public void closeLogs() {
         EventSystem.current.SetSelectedGameObject(null);
-        EventSystem.current.SetSelectedGameObject(controllerBtn);
+        EventSystem.current.SetSelectedGameObject(exitLogBtn);
         StartCoroutine(logMenu.PopDownMenu());
         
     }
