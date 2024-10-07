@@ -10,7 +10,8 @@ public class Collectable : MonoBehaviour
 
     private void Start()
     {
-        if (CollectibleManager.Instance != null && CollectibleManager.Instance.IsItemCollected(_collectableInfo.Name))
+        CollectibleManager.Instance.ResetCollectedItems(); // ! For Debuggin propurses
+        if (CollectibleManager.Instance != null && CollectibleManager.Instance.IsItemCollected(_collectableInfo.Id))
         {
             gameObject.SetActive(false);
         }
@@ -18,7 +19,7 @@ public class Collectable : MonoBehaviour
 
     public void TakeObject()
     {
-        CollectibleManager.Instance.RegisterCollectedItem(_collectableInfo.Name);
+        CollectibleManager.Instance.RegisterCollectedItem(_collectableInfo.Id);
         gameObject.SetActive(false);
     }
 }

@@ -31,8 +31,7 @@ public class BountyHunterLogic : MonoBehaviour
 
         if(_collectableDetected == null) return;
 
-        // Show Information in the UI
-        print("HIT: " + _collectableDetected.GetCollectableInfo.Name);
+        // Show Information in the UI        
 
         if(Input.GetButtonDown("Grab"))
         {

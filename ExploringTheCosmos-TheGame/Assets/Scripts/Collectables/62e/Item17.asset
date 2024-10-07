@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1391b712754b74c4fae0ef09234d88b2, type: 3}
-  m_Name: TestObject
+  m_Name: Item17
   m_EditorClassIdentifier: 
-  _planetBelong: 1
-  _id: 0
-  _name: Prueba1
-  _description: Descripcion Chileron
+  _planetBelong: 4
+  _id: 17
+  _parameter: "Mp (M\u2299)"
+  _valueAndDimension: "< 36 M\u2299"
+  _description: "Masa del planeta en masas solares (l\xEDmite superior)."

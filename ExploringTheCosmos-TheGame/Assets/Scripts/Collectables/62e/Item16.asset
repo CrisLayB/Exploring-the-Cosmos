@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1391b712754b74c4fae0ef09234d88b2, type: 3}
-  m_Name: TestObject
+  m_Name: Item16
   m_EditorClassIdentifier: 
-  _planetBelong: 1
-  _id: 0
-  _name: Prueba1
-  _description: Descripcion Chileron
+  _planetBelong: 4
+  _id: 16
+  _parameter: Teq (K)
+  _valueAndDimension: "270 \xB1 15 K"
+  _description: Temperatura de equilibrio del planeta.

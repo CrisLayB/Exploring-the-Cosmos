@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1391b712754b74c4fae0ef09234d88b2, type: 3}
-  m_Name: TestObject
+  m_Name: Item5
   m_EditorClassIdentifier: 
   _planetBelong: 1
-  _id: 0
-  _name: Prueba1
-  _description: Descripcion Chileron
+  _id: 5
+  _parameter: a (au)
+  _valueAndDimension: "0.0553 \xB1 0.0005 UA"
+  _description: "Semieje mayor de la \xF3rbita del planeta en unidades astron\xF3micas."
