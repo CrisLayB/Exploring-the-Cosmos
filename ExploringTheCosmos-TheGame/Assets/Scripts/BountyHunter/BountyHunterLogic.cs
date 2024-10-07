@@ -16,18 +16,27 @@ public class BountyHunterLogic : MonoBehaviour
         if (Physics.Raycast(camRay, out hitInfo, _maxDistance))
         {            
             Debug.DrawLine(camRay.origin, hitInfo.point, Color.green);
-
-            _collectableDetected = hitInfo.collider.gameObject.GetComponent<Collectable>();
-            if(_collectableDetected != null)
-            {
-                print("HIT: " + _collectableDetected.GetCollectableInfo.Name);
-                // Shot Information of the Collectable or press Button
-            }
+            PickupObject(hitInfo);
         }
         else
         {
             Debug.DrawLine(camRay.origin, camRay.origin + camRay.direction * _maxDistance, Color.red);
             _collectableDetected = null;
+        }
+    }
+
+    private void PickupObject(RaycastHit hitInfo)
+    {
+        _collectableDetected = hitInfo.collider.gameObject.GetComponent<Collectable>();
+
+        if(_collectableDetected == null) return;
+
+        // Show Information in the UI
+        print("HIT: " + _collectableDetected.GetCollectableInfo.Name);
+
+        if(Input.GetButtonDown("Grab"))
+        {
+            _collectableDetected.TakeObject();
         }
     }
     
