@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 
 public class Tests : MonoBehaviour
@@ -16,6 +17,12 @@ public class Tests : MonoBehaviour
 
     [SerializeField] GameObject controllersPanelGO;
     ControllersPanel controllersPanel;
+
+    [SerializeField] GameObject controllerBtn;
+    [SerializeField] GameObject exitControllerBtn;
+    [SerializeField] GameObject logBtn;
+    [SerializeField] GameObject exitLogBtn;
+
 
     
 
@@ -42,7 +49,7 @@ public class Tests : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.L)) {
+        if (Input.GetKeyDown(KeyCode.Tab)) {
             logMenu = logMenuGO.GetComponent<LogMenu>();
             if (logMenuGO.activeSelf) {
                 StartCoroutine(logMenu.PopDownMenu());
@@ -65,5 +72,36 @@ public class Tests : MonoBehaviour
             }
 
         }
+    }
+
+    public void OpenControllers() {
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(controllerBtn);
+        controllersPanel = controllersPanelGO.GetComponent<ControllersPanel>();
+        controllersPanelGO.SetActive(true);
+        StartCoroutine(controllersPanel.PopUpMenu());
+    }
+
+    public void CloseControllers() {
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(exitControllerBtn);
+        controllersPanel = controllersPanelGO.GetComponent<ControllersPanel>();
+        StartCoroutine(controllersPanel.PopDownMenu());
+        
+    }
+
+    public void openLogs() {
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(logBtn);
+        logMenu = logMenuGO.GetComponent<LogMenu>();
+        logMenuGO.SetActive(true);
+        StartCoroutine(logMenu.PopUpMenu());
+    }
+
+    public void closeLogs() {
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(exitLogBtn);
+        StartCoroutine(logMenu.PopDownMenu());
+        
     }
 }
