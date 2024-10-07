@@ -28,7 +28,7 @@ public class TextInfo : MonoBehaviour
 
     public IEnumerator PopUpMenu() {
         // LeanTween.size(background.GetComponent<RectTransform>(), backgroundSize, 0.5f).setEase(LeanTweenType.easeOutBack);
-        backgroundRT.LeanSize(backgroundSize, 0.2f).setEase(LeanTweenType.easeInCubic);
+        backgroundRT.LeanSize(backgroundSize, 0.3f).setEase(LeanTweenType.easeInCubic);
         yield return new WaitForSeconds(0.3f);
         backgroundlines.SetActive(true);
         text.SetActive(true);
@@ -39,7 +39,7 @@ public class TextInfo : MonoBehaviour
         text.SetActive(false);
         yield return new WaitForSeconds(0.4f);
 
-        backgroundRT.LeanSize(new Vector2(0, 0), 0.5f).setEase(LeanTweenType.easeInCubic);
+        backgroundRT.LeanSize(new Vector2(0, 0), 0.3f).setEase(LeanTweenType.easeInCubic);
 
         yield return new WaitForSeconds(0.3f);
 

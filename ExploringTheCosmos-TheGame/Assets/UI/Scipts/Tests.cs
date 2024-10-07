@@ -14,12 +14,16 @@ public class Tests : MonoBehaviour
     [SerializeField] GameObject textInfoGO;
     TextInfo textInfo;
 
+    [SerializeField] GameObject logMenuGO;
+    LogMenu logMenu;
+
     
 
     void Start()
     {
         pauseMenuGO.SetActive(false);
         textInfoGO.SetActive(false);
+        logMenuGO.SetActive(false);
     }
 
     // Update is called once per frame
@@ -46,6 +50,18 @@ public class Tests : MonoBehaviour
             } else {
                 textInfoGO.SetActive(true);
                 StartCoroutine(textInfo.PopUpMenu());
+            }
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.L)) {
+            logMenu = logMenuGO.GetComponent<LogMenu>();
+            if (logMenuGO.activeSelf) {
+                StartCoroutine(logMenu.PopDownMenu());
+
+            } else {
+                logMenuGO.SetActive(true);
+                StartCoroutine(logMenu.PopUpMenu());
             }
 
         }
