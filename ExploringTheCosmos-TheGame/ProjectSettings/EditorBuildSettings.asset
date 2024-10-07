@@ -4,5 +4,26 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 2d934334128267449b4e65cd94112243
+  - enabled: 1
+    path: Assets/Scenes/Galaxy.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Planets/Planeta62b.unity
+    guid: b055e2812c4f89047a62f5f82e2ccea4
+  - enabled: 1
+    path: Assets/Scenes/Planets/Planeta62c.unity
+    guid: 1ccf05346e0881740b8fe4d5b625a25a
+  - enabled: 1
+    path: Assets/Scenes/Planets/Planeta62d.unity
+    guid: 863af826817a4e14f99955a85debc5df
+  - enabled: 1
+    path: Assets/Scenes/Planets/Planeta62e.unity
+    guid: acb5cd3ee51e2cb4eb3772a5b9afb28e
+  - enabled: 1
+    path: Assets/Scenes/Planets/Planeta62f.unity
+    guid: 63a1e4d5413d62b46afa234a5bd92e77
   m_configObjects: {}
