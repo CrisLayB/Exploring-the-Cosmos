@@ -156,8 +156,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00012207031, y: -30.808}
-  m_SizeDelta: {x: 459.3192, y: 321.62}
+  m_AnchoredPosition: {x: -0.0003891, y: -30.808}
+  m_SizeDelta: {x: 662.82, y: 321.62}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &12578748
 MonoBehaviour:
@@ -179,10 +179,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'NASA/JPL-Caltech/M. Russo, A. Santaguida (SYSTEM Sounds) - 5,000 Exoplanets:
-    Listen to the Sounds of Discovery
+  m_text: 'NASA, "Kepler-62 and the Solar System", https://science.nasa.gov/resource/kepler-62-and-the-solar-system/
 
-    https://www.youtube.com/watch?v=yv4DbU1CWAY&t=2s'
+
+    NASA,
+    "Kepler / K2", https://science.nasa.gov/mission/kepler/
+
+
+    NASA, "Kepler-22b:
+    Closer to Finding Another Earth", https://science.nasa.gov/resource/kepler-22b-closer-to-finding-another-earth/'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a2ee55a9d34fba741a863665de551b4c, type: 2}
   m_sharedMaterial: {fileID: -1768142366508906361, guid: a2ee55a9d34fba741a863665de551b4c, type: 2}
