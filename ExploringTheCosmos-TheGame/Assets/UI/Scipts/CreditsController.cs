@@ -34,7 +34,7 @@ public class CreditsController : MonoBehaviour
             // Start panel at bottom position
             current.anchoredPosition = bottomPosition;
             // Animate from bottom to middle
-            current.LeanMoveLocal(middlePosition, 1f).setEase(LeanTweenType.easeOutCubic);
+            current.LeanMoveLocal(middlePosition, 1f).setEase(LeanTweenType.easeInCubic);
 
 
             yield return new WaitForSeconds(6f);
