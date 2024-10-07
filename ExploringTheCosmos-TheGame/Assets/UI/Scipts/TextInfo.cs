@@ -37,7 +37,7 @@ public class TextInfo : MonoBehaviour
     public IEnumerator PopDownMenu() {
         backgroundlines.SetActive(false);
         text.SetActive(false);
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.4f);
 
         backgroundRT.LeanSize(new Vector2(0, 0), 0.3f).setEase(LeanTweenType.easeInCubic);
 
