@@ -759,7 +759,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: L
+  m_text: Tab | Menu button
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a2ee55a9d34fba741a863665de551b4c, type: 2}
   m_sharedMaterial: {fileID: -1768142366508906361, guid: a2ee55a9d34fba741a863665de551b4c, type: 2}
@@ -786,8 +786,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1932,7 +1932,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuGO: {fileID: 443388539}
-  textInfoGO: {fileID: 1257389342}
   logMenuGO: {fileID: 1257389342}
   controllersPanelGO: {fileID: 2006904639}
 --- !u!4 &1234533258
@@ -3270,6 +3269,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 11648138}
     m_Modifications:
+    - target: {fileID: 7513424096483824392, guid: f1806bab6c991c04cb40215365d17b40, type: 3}
+      propertyPath: m_text
+      value: "Navegaci\xF3n: WASD | Joystick Izquierdo.\nAscender: Tecla E | Boton
+        RB\nDescender: Tecla Q | Boton LB\nNitro: Tecla Shift Izq | Boton RT\nEsconder
+        Instrucciones: Tecla X | Boton B\nReiniciar Posici\xF3n Rotaci\xF3n: Tecla
+        F | Boton Y\nRevisar Log: Tecla Tab | Menu Button \nControles: Tecla C |"
+      objectReference: {fileID: 0}
     - target: {fileID: 7587246936945352401, guid: f1806bab6c991c04cb40215365d17b40, type: 3}
       propertyPath: m_Name
       value: ControllersPanel
