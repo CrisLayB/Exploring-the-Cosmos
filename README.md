@@ -14,3 +14,8 @@ This soluction will be conformed for a game (The main part of the project) and d
 Folders Organization:
 - ExploringTheCosmos-TheGame
 - DataAnalysis
+
+## You can play the game with the following Links:
+
+https://drive.google.com/drive/folders/1Hpo9p5qskg65-o2WKZcXE3QqeewPRBQQ?usp=drive_link
+
