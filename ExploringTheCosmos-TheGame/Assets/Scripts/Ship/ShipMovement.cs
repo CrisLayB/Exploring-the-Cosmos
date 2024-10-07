@@ -22,14 +22,19 @@ public class ShipMovement : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody>();
         _showInfo = GetComponent<TextForShowInfo>();
-        LockMouseCursor();
+        if(GameManager.Instance != null) GameManager.Instance.LockMouseCursor();
     }
 
     private void Update()
     {
+        if(GameManager.Instance != null)
+        {
+            if(!GameManager.Instance.IsPlaying) return;
+        }
+        
         if((Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2")) && Cursor.visible)
         {
-            LockMouseCursor();
+            if(GameManager.Instance != null) GameManager.Instance.LockMouseCursor();
         }
 
         if(!_allowedToMove) return;
@@ -61,17 +66,7 @@ public class ShipMovement : MonoBehaviour
         if (Input.GetButton("Descend")) transform.Rotate(Vector3.left * _rotationSpeed);
     }
 
-    private void LockMouseCursor()
-    {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
-    }
-
-    private void UnlockMouseCursor()
-    {
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
-    }
+    
 
     private void OnCollisionEnter(Collision other) 
     {

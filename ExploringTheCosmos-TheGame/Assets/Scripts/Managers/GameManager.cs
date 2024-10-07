@@ -20,4 +20,23 @@ public class GameManager : MonoBehaviour
 
         Destroy(gameObject);
     }
+
+    private bool _isPlaying = true;
+
+    public bool IsPlaying { get => _isPlaying; }
+
+    public void ContinuePlaying() => _isPlaying = true;
+    public void StopPlaying() => _isPlaying = false;
+
+    public void LockMouseCursor()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public void UnlockMouseCursor()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
 }
