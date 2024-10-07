@@ -747,6 +747,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+--- !u!1 &441882755 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4459864850019384750, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+  m_PrefabInstance: {fileID: 441882754}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &443388537
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -842,6 +847,14 @@ PrefabInstance:
     - target: {fileID: 1474479753382861135, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7100274157826801994, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 441882755}
+    - target: {fileID: 7100274157826801994, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1503,8 +1516,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuGO: {fileID: 443388539}
-  textInfoGO: {fileID: 1257389342}
   logMenuGO: {fileID: 1257389342}
+  controllersPanelGO: {fileID: 0}
 --- !u!4 &1234533258
 Transform:
   m_ObjectHideFlags: 0

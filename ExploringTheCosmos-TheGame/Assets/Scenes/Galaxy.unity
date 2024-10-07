@@ -2237,10 +2237,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseMenu
       objectReference: {fileID: 0}
-    - target: {fileID: 360830803790846187, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1474479753382861135, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2321,98 +2317,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2938176288352355859, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
-      propertyPath: m_Colors.m_SelectedColor.b
-      value: 0.4811321
-      objectReference: {fileID: 0}
-    - target: {fileID: 2938176288352355859, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
-      propertyPath: m_Colors.m_SelectedColor.g
-      value: 0.4811321
-      objectReference: {fileID: 0}
-    - target: {fileID: 2938176288352355859, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
-      propertyPath: m_Colors.m_SelectedColor.r
-      value: 0.4811321
-      objectReference: {fileID: 0}
-    - target: {fileID: 5610683132129399328, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
-      propertyPath: m_Colors.m_SelectedColor.b
-      value: 0.4811321
-      objectReference: {fileID: 0}
-    - target: {fileID: 5610683132129399328, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
-      propertyPath: m_Colors.m_SelectedColor.g
-      value: 0.4811321
-      objectReference: {fileID: 0}
-    - target: {fileID: 5610683132129399328, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
-      propertyPath: m_Colors.m_SelectedColor.r
-      value: 0.4811321
-      objectReference: {fileID: 0}
-    - target: {fileID: 5610683132129399328, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5610683132129399328, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5610683132129399328, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 544828412}
-    - target: {fileID: 5610683132129399328, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5610683132129399328, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ReturnToMainMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 5610683132129399328, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: LevelSelector, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5610683132129399328, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7100274157826801994, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
-      propertyPath: m_Colors.m_SelectedColor.b
-      value: 0.4811321
-      objectReference: {fileID: 0}
-    - target: {fileID: 7100274157826801994, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
-      propertyPath: m_Colors.m_SelectedColor.g
-      value: 0.4811321
-      objectReference: {fileID: 0}
-    - target: {fileID: 7100274157826801994, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
-      propertyPath: m_Colors.m_SelectedColor.r
-      value: 0.4811321
-      objectReference: {fileID: 0}
-    - target: {fileID: 7100274157826801994, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7100274157826801994, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7100274157826801994, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 277486289}
-    - target: {fileID: 7100274157826801994, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7100274157826801994, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PauseMenuFunctionallity
-      objectReference: {fileID: 0}
-    - target: {fileID: 7100274157826801994, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ShowMenus, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 7100274157826801994, guid: 7e1d1880b1b76804ca4462f6131eba70, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
