@@ -227,6 +227,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &17614099 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5348372086319263796, guid: 40dd224ac57fbdf498cf175c96661c55, type: 3}
+  m_PrefabInstance: {fileID: 4460855130225227704}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &76967624
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1414,6 +1419,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _collectableInfo: {fileID: 11400000, guid: 460270b2f24a2f14cadce19c5e28125c, type: 2}
+--- !u!1 &677393118 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2510411662412915908, guid: f18d2186102a39b498ee5cae803fe26d, type: 3}
+  m_PrefabInstance: {fileID: 7354905680825042416}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &899252201
 GameObject:
   m_ObjectHideFlags: 0
@@ -1934,6 +1944,9 @@ MonoBehaviour:
   pauseMenuGO: {fileID: 443388539}
   logMenuGO: {fileID: 1257389342}
   controllersPanelGO: {fileID: 2006904639}
+  controllerBtn: {fileID: 677393118}
+  exitControllerBtn: {fileID: 1843452974}
+  logBtn: {fileID: 17614099}
 --- !u!4 &1234533258
 Transform:
   m_ObjectHideFlags: 0
@@ -2637,6 +2650,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1805553746}
   m_CullTransparentMesh: 1
+--- !u!1 &1843452974 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5916640130124784445, guid: f1806bab6c991c04cb40215365d17b40, type: 3}
+  m_PrefabInstance: {fileID: 558740351181546339}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1902335337
 PrefabInstance:
   m_ObjectHideFlags: 0
