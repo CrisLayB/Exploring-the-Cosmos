@@ -9,31 +9,19 @@ public class ShipMovement : MonoBehaviour
     [SerializeField] private float _moveSpeed = 10f;
     [SerializeField] private float _nitroSpeed = 20f;
     [SerializeField] private float _rotationSpeed = 1f;
-
-    [Header("UI Connection")]
-    [SerializeField] private TextInfo _textInfo;
-
+        
     // Private Components
     private Rigidbody _rb; 
 
     // Auxiliar Components
-    private TextMeshProUGUI _textVisitinPlanet;
+    private TextForShowInfo _showInfo;
     private Planet _planetSelected;
+    private bool _allowedToMove = true;
 
     private void Start() 
     {
-        _rb = GetComponent<Rigidbody>();        
-
-        if(_textInfo != null)
-        {
-            _textVisitinPlanet = _textInfo.GetComponentInChildren<TextMeshProUGUI>();
-        }
-
-        if(_textVisitinPlanet != null)
-        {
-            _textVisitinPlanet.text = $"";
-        }
-
+        _rb = GetComponent<Rigidbody>();
+        _showInfo = GetComponent<TextForShowInfo>();
         LockMouseCursor();
     }
 
@@ -43,6 +31,8 @@ public class ShipMovement : MonoBehaviour
         {
             LockMouseCursor();
         }
+
+        if(!_allowedToMove) return;
 
         if(Input.GetButtonDown("ResetPos"))
         {
@@ -93,11 +83,19 @@ public class ShipMovement : MonoBehaviour
 
     private IEnumerator RestartLevel()
     {
-        print("AAA");
-        Destroy(this.gameObject);        
+        _allowedToMove = false;
+        
+        // Explode Particles
+        
+        MeshRenderer[] meshes = GetComponentsInChildren<MeshRenderer>();
+        foreach (MeshRenderer mRenderer in meshes)
+        {
+            mRenderer.enabled = false;
+        }
+
         yield return new WaitForSeconds(2f);
+        _allowedToMove = true;
         LevelSelector.GalaxyNavigation();
-        print("BBB");
     }
 
     private void OnCollisionExit(Collision other) 
@@ -112,22 +110,13 @@ public class ShipMovement : MonoBehaviour
         _planetSelected = other.gameObject.GetComponent<Planet>();
 
         if(_planetSelected == null) return;
-
-        if(_textVisitinPlanet == null) return;
-
         
-        _textVisitinPlanet.text = $"{_planetSelected.PlanetSelected.ToString()}\n\nPresiona Tecla Espacio o Boton A para visitar.";
-        _textInfo.gameObject.SetActive(true);
-        StartCoroutine(_textInfo.PopUpMenu());
+        _showInfo.ShowText($"{_planetSelected.PlanetSelected.ToString()}\n\nPresiona Tecla Espacio o Boton A para visitar.");
     }
 
     private void OnTriggerExit(Collider other) 
     {        
         _planetSelected = null;
-        
-        if(_textVisitinPlanet == null) return;
-
-        StartCoroutine(_textInfo.PopDownMenu());
-        _textVisitinPlanet.text = $"";
+        _showInfo.HideText();
     }
 }
