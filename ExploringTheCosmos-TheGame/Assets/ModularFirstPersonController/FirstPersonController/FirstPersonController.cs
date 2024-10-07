@@ -151,6 +151,8 @@ public class FirstPersonController : MonoBehaviour
 
     void Start()
     {
+        if(GameManager.Instance != null) GameManager.Instance.ContinuePlaying();
+        
         if(lockCursor)
         {
             Cursor.lockState = CursorLockMode.Locked;
@@ -206,7 +208,7 @@ public class FirstPersonController : MonoBehaviour
         {
             if(!GameManager.Instance.IsPlaying) return;
         }
-        
+
         #region Camera
 
         // Control camera movement

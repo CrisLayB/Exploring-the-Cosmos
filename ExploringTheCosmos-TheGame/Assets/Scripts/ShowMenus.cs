@@ -25,21 +25,7 @@ public class ShowMenus : MonoBehaviour
     {
         if(Input.GetButtonDown("PauseMenu"))
         {            
-            if (pauseMenuGO.activeSelf) 
-            {
-                StartCoroutine(pauseMenu.PopDownMenu());
-                if(GameManager.Instance != null) GameManager.Instance.LockMouseCursor();
-                if(GameManager.Instance != null) GameManager.Instance.ContinuePlaying();
-            } 
-            else 
-            {
-                if(logMenuGO.activeSelf) return;
-                
-                pauseMenuGO.SetActive(true);
-                StartCoroutine(pauseMenu.PopUpMenu());
-                if(GameManager.Instance != null) GameManager.Instance.UnlockMouseCursor();
-                if(GameManager.Instance != null) GameManager.Instance.StopPlaying();
-            }
+            PauseMenuFunctionallity();
         }
 
         if(Input.GetButtonDown("CollectionMenu"))
@@ -59,6 +45,25 @@ public class ShowMenus : MonoBehaviour
                 if(GameManager.Instance != null) GameManager.Instance.UnlockMouseCursor();
                 if(GameManager.Instance != null) GameManager.Instance.StopPlaying();
             }
+        }
+    }
+
+    public void PauseMenuFunctionallity()
+    {
+        if (pauseMenuGO.activeSelf) 
+        {
+            StartCoroutine(pauseMenu.PopDownMenu());
+            if(GameManager.Instance != null) GameManager.Instance.LockMouseCursor();
+            if(GameManager.Instance != null) GameManager.Instance.ContinuePlaying();
+        } 
+        else 
+        {
+            if(logMenuGO.activeSelf) return;
+            
+            pauseMenuGO.SetActive(true);
+            StartCoroutine(pauseMenu.PopUpMenu());
+            if(GameManager.Instance != null) GameManager.Instance.UnlockMouseCursor();
+            if(GameManager.Instance != null) GameManager.Instance.StopPlaying();
         }
     }
 }

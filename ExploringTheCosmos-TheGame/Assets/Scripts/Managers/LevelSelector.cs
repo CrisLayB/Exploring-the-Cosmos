@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class LevelSelector : MonoBehaviour
 {        
+    public static void ReturnToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+    
     public static void GalaxyNavigation()
     {
         SceneManager.LoadScene("Galaxy");

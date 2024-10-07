@@ -23,6 +23,7 @@ public class ShipMovement : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
         _showInfo = GetComponent<TextForShowInfo>();
         if(GameManager.Instance != null) GameManager.Instance.LockMouseCursor();
+        if(GameManager.Instance != null) GameManager.Instance.ContinuePlaying();
     }
 
     private void Update()
@@ -31,7 +32,7 @@ public class ShipMovement : MonoBehaviour
         {
             if(!GameManager.Instance.IsPlaying) return;
         }
-        
+
         if((Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2")) && Cursor.visible)
         {
             if(GameManager.Instance != null) GameManager.Instance.LockMouseCursor();
