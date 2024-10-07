@@ -11,8 +11,8 @@ public class Collectable : MonoBehaviour
 
     private void Start()
     {
-        CollectibleManager.Instance.ResetCollectedItems(); // ! For Debuggin propurses
-        
+        // CollectibleManager.Instance.ResetCollectedItems(); // ! For Debuggin propurses
+
         if (CollectibleManager.Instance != null && CollectibleManager.Instance.IsItemCollected(_collectableInfo.Id))
         {
             gameObject.SetActive(false);
