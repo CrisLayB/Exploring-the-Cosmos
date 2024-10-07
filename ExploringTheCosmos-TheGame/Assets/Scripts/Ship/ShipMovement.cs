@@ -12,15 +12,27 @@ public class ShipMovement : MonoBehaviour
         
     // Private Components
     private Rigidbody _rb; 
+    private ParticleSystem _particleSystem;
+    private Color _originalColor;
 
     // Auxiliar Components
     private TextForShowInfo _showInfo;
     private Planet _planetSelected;
     private bool _allowedToMove = true;
+    private bool _isMoving = false;
+    
 
     private void Start() 
     {
         _rb = GetComponent<Rigidbody>();
+        _particleSystem = GetComponentInChildren<ParticleSystem>();
+
+        if(_particleSystem == null) Debug.LogWarning("ShipMovement.cs: ParticleSystem was not found");
+        else
+        {
+            _originalColor = _particleSystem.startColor;            
+        }
+        
         _showInfo = GetComponent<TextForShowInfo>();
         if(GameManager.Instance != null) GameManager.Instance.LockMouseCursor();
         if(GameManager.Instance != null) GameManager.Instance.ContinuePlaying();
@@ -51,12 +63,38 @@ public class ShipMovement : MonoBehaviour
         }
 
         float moveDirection = Input.GetAxis("Vertical");
+        
+        if (Mathf.Abs(moveDirection) > 0.1f && !_isMoving)
+        {
+            _particleSystem.Play();
+            _isMoving = true;
+        }
+        else if (Mathf.Abs(moveDirection) <= 0.1f && _isMoving)
+        {
+            _particleSystem.Stop();
+            _isMoving = false;
+        }
 
         float shipVelocity = _moveSpeed;
         float inputNitro = Input.GetAxis("Nitro");
 
-        if(Input.GetButtonDown("Nitro")) shipVelocity = _nitroSpeed;
-        else if(inputNitro > 0.1f) shipVelocity = _nitroSpeed * Mathf.Abs(inputNitro);
+        if(Input.GetButtonDown("Nitro")) 
+        {
+            shipVelocity = _nitroSpeed;
+            _particleSystem.startSpeed = 30f;
+            _particleSystem.startColor = Color.blue;            
+        }
+        else if(inputNitro > 0.1f)
+        {
+            shipVelocity = _nitroSpeed * Mathf.Abs(inputNitro);
+            _particleSystem.startSpeed = 30f;
+            _particleSystem.startColor = Color.blue;
+        }
+        else
+        {
+            _particleSystem.startSpeed = 10f;
+            _particleSystem.startColor = _originalColor;
+        }
 
         transform.Translate(Vector3.forward * moveDirection * shipVelocity * Time.deltaTime);
 
@@ -66,9 +104,7 @@ public class ShipMovement : MonoBehaviour
         if (Input.GetButton("Ascend")) transform.Rotate(Vector3.right * _rotationSpeed);
         if (Input.GetButton("Descend")) transform.Rotate(Vector3.left * _rotationSpeed);
     }
-
     
-
     private void OnCollisionEnter(Collision other) 
     {
         if(other.gameObject?.GetComponent<Planet>().PlanetSelected == PlanetType.Sol)
